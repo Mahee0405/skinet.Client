@@ -9,11 +9,10 @@ export class AppComponent implements OnInit {
   title = 'skinet';
 
   constructor(){
-    
+
   }
-  
 
   ngOnInit(): void {
-    
+
   }
 }
