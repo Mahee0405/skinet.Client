@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './src/app/core/core.module';
-import { ShopModule } from './src/app/shop/shop.module';
+import { HomeModule } from './src/app/home/home.module';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { ShopModule } from './src/app/shop/shop.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    ShopModule
+
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
