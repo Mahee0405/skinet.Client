@@ -5,11 +5,14 @@ import { ServerErrorComponent } from './src/app/core/server-error/server-error.c
 import { HomeComponent } from './src/app/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'shop', loadChildren: () => import('./src/app/shop/shop.module').then(mod => mod.ShopModule) },
-  { path: 'server-error', component: ServerErrorComponent },
-  { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '', component: HomeComponent,data: { breadcrumb: 'Home' } },
+  {
+    path: 'shop', loadChildren: () => import('./src/app/shop/shop.module').then(mod => mod.ShopModule)
+    , data: { breadcrumb: 'Shop' }
+  },
+  { path: 'server-error', component: ServerErrorComponent, data: { breadcrumb: 'Server Error' } },
+  { path: 'not-found', component: NotFoundComponent, data: { breadcrumb: 'Not Found' } },
+  { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 
 @NgModule({

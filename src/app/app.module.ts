@@ -21,7 +21,7 @@ import { ErrorInterceptor } from './src/app/core/interceptors/error.interceptor'
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-
+  
     HomeModule
   ],
   providers: [
