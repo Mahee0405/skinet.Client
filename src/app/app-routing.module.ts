@@ -5,10 +5,18 @@ import { ServerErrorComponent } from './src/app/core/server-error/server-error.c
 import { HomeComponent } from './src/app/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent,data: { breadcrumb: 'Home' } },
+  { path: '', component: HomeComponent, data: { breadcrumb: 'Home' } },
   {
     path: 'shop', loadChildren: () => import('./src/app/shop/shop.module').then(mod => mod.ShopModule)
     , data: { breadcrumb: 'Shop' }
+  },
+  {
+    path: 'basket', loadChildren: () => import('./src/app/basket/basket.module').then(mod => mod.BasketModule)
+    , data: { breadcrumb: 'basket' }
+  },
+  {
+    path: 'checkout', loadChildren: () => import('./src/app/checkout/checkout.module').then(mod => mod.CheckoutModule)
+    , data: { breadcrumb: 'basket' }
   },
   { path: 'server-error', component: ServerErrorComponent, data: { breadcrumb: 'Server Error' } },
   { path: 'not-found', component: NotFoundComponent, data: { breadcrumb: 'Not Found' } },
