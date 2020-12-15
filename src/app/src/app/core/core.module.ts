@@ -24,7 +24,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   exports: [
     NavBarComponent,
-    SectionHeaderComponent
+    SectionHeaderComponent,
+    ToastrModule
+
   ]
 })
 export class CoreModule { }

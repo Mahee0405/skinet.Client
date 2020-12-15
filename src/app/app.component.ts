@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  loadBasket() {
+  loadBasket(): void {
     const basketId = localStorage.getItem('basket_id');
     if (basketId) {
       this.basektService.getBasket(basketId).subscribe(
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  loadCurrentUser() {
+  loadCurrentUser(): void {
     const token = localStorage.getItem('token');
     this.accountService.loadCurrentUser(token).subscribe(() => {
     }, error => {
